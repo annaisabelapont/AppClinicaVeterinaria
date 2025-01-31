@@ -1,1 +1,1 @@
-Anna isabola é bobona
+giobanannas******* é mais bobona ainda
