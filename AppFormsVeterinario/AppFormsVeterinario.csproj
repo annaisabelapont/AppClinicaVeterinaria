@@ -136,6 +136,9 @@
     <Compile Include="Formularios\FormListarVeterinario.Designer.cs">
       <DependentUpon>FormListarVeterinario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Animal.cs" />
+    <Compile Include="Models\Consulta.cs" />
+    <Compile Include="Models\Tutor.cs" />
     <Compile Include="Models\Veterinario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
