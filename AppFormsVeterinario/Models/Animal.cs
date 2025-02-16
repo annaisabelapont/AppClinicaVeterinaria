@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AppFormsVeterinario.Models
+﻿namespace AppFormsVeterinario.Models
 {
-    internal class Animal
+    public class Animal
     {
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Especie { get; set; }
+        public string Raca { get; set; }
+        public string Genero { get; set; }
+        public int IdTutorFk { get; set; }
     }
 }

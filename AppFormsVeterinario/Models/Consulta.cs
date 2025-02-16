@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppFormsVeterinario.Models
 {
-    internal class Consulta
+    public class Consulta
     {
+        public int Id { get; set; }
+        public string Tipo { get; set; }
+        public DateTime DataConsulta { get; set; }
+        public int IdVeterinarioFk { get; set; }
+        public int IdAnimalFk { get; set; }
     }
 }
