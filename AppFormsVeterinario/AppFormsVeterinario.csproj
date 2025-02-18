@@ -98,7 +98,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contexto\AnimalContext.cs" />
+    <Compile Include="Contexto\ConsultaContext.cs" />
     <Compile Include="Contexto\Context.cs" />
+    <Compile Include="Contexto\TutorContext.cs" />
     <Compile Include="Contexto\VeterinarioContext.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
