@@ -1,15 +1,8 @@
-﻿using AppFormsVeterinario.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms;//acesso ao messagebox
-using MySql.Data.MySqlClient;//trabalhar com as classes de conexão com o banco de dados MySql
-using System.Reflection;//acesso as classes dentro da pasta Models
-
+using MySql.Data.MySqlClient;
+using AppFormsVeterinario.Models;
 
 namespace AppFormsVeterinario.Contexto
 {
@@ -18,12 +11,11 @@ namespace AppFormsVeterinario.Contexto
         private MySqlConnection conexao = null;
         private string dados_conexao;
 
-        //método construtor para carregar as inforamções dentro do objeto "conexão" para conectar com o banco Mysql
         public VeterinarioContext()
         {
             dados_conexao = "server=localhost;port=3306;database=aula_po2;user=root;password=34241610@Gi;Persist Security Info=false;Connect Timeout=300;";
-            conexao = new MySqlConnection(dados_conexao);//conexão preparada => objeto criado e pornto para conectar ao banco
-        }//fim do método construtor
+            conexao = new MySqlConnection(dados_conexao);
+        }
 
         public List<Veterinario> ListarVeterinarios()
         {
