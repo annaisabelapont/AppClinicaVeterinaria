@@ -109,34 +109,34 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FormAtualizarVeterinario.cs">
+    <Compile Include="Formularios\Veterinario\FormAtualizarVeterinario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FormAtualizarVeterinario.Designer.cs">
+    <Compile Include="Formularios\Veterinario\FormAtualizarVeterinario.Designer.cs">
       <DependentUpon>FormAtualizarVeterinario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FormCadastrarVeterinario.cs">
+    <Compile Include="Formularios\Veterinario\FormCadastrarVeterinario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FormCadastrarVeterinario.Designer.cs">
+    <Compile Include="Formularios\Veterinario\FormCadastrarVeterinario.Designer.cs">
       <DependentUpon>FormCadastrarVeterinario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FormConsultarVeterinario.cs">
+    <Compile Include="Formularios\Veterinario\FormConsultarVeterinario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FormConsultarVeterinario.Designer.cs">
+    <Compile Include="Formularios\Veterinario\FormConsultarVeterinario.Designer.cs">
       <DependentUpon>FormConsultarVeterinario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FormDeletarVeterinario.cs">
+    <Compile Include="Formularios\Veterinario\FormDeletarVeterinario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FormDeletarVeterinario.Designer.cs">
+    <Compile Include="Formularios\Veterinario\FormDeletarVeterinario.Designer.cs">
       <DependentUpon>FormDeletarVeterinario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FormListarVeterinario.cs">
+    <Compile Include="Formularios\Veterinario\FormListarVeterinario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FormListarVeterinario.Designer.cs">
+    <Compile Include="Formularios\Veterinario\FormListarVeterinario.Designer.cs">
       <DependentUpon>FormListarVeterinario.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Animal.cs" />
@@ -148,19 +148,19 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FormAtualizarVeterinario.resx">
+    <EmbeddedResource Include="Formularios\Veterinario\FormAtualizarVeterinario.resx">
       <DependentUpon>FormAtualizarVeterinario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FormCadastrarVeterinario.resx">
+    <EmbeddedResource Include="Formularios\Veterinario\FormCadastrarVeterinario.resx">
       <DependentUpon>FormCadastrarVeterinario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FormConsultarVeterinario.resx">
+    <EmbeddedResource Include="Formularios\Veterinario\FormConsultarVeterinario.resx">
       <DependentUpon>FormConsultarVeterinario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FormDeletarVeterinario.resx">
+    <EmbeddedResource Include="Formularios\Veterinario\FormDeletarVeterinario.resx">
       <DependentUpon>FormDeletarVeterinario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FormListarVeterinario.resx">
+    <EmbeddedResource Include="Formularios\Veterinario\FormListarVeterinario.resx">
       <DependentUpon>FormListarVeterinario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -188,6 +188,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Formularios\Animal\" />
+    <Folder Include="Formularios\Consulta\" />
+    <Folder Include="Formularios\Tutor\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

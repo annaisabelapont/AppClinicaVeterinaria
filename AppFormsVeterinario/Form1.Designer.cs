@@ -39,7 +39,7 @@
             // btListarVeterinarios
             // 
             this.btListarVeterinarios.BackColor = System.Drawing.Color.White;
-            this.btListarVeterinarios.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.btListarVeterinarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btListarVeterinarios.ForeColor = System.Drawing.Color.Indigo;
             this.btListarVeterinarios.Location = new System.Drawing.Point(12, 326);
             this.btListarVeterinarios.Name = "btListarVeterinarios";
@@ -52,7 +52,7 @@
             // btAtualizarVeterinario
             // 
             this.btAtualizarVeterinario.BackColor = System.Drawing.Color.White;
-            this.btAtualizarVeterinario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.btAtualizarVeterinario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btAtualizarVeterinario.ForeColor = System.Drawing.Color.Indigo;
             this.btAtualizarVeterinario.Location = new System.Drawing.Point(12, 222);
             this.btAtualizarVeterinario.Name = "btAtualizarVeterinario";
@@ -65,7 +65,7 @@
             // btCadastrarVeterinario
             // 
             this.btCadastrarVeterinario.BackColor = System.Drawing.Color.White;
-            this.btCadastrarVeterinario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.btCadastrarVeterinario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btCadastrarVeterinario.ForeColor = System.Drawing.Color.Indigo;
             this.btCadastrarVeterinario.Location = new System.Drawing.Point(12, 96);
             this.btCadastrarVeterinario.Name = "btCadastrarVeterinario";
@@ -78,7 +78,7 @@
             // btConsultarVeterinario
             // 
             this.btConsultarVeterinario.BackColor = System.Drawing.Color.White;
-            this.btConsultarVeterinario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.btConsultarVeterinario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btConsultarVeterinario.ForeColor = System.Drawing.Color.Indigo;
             this.btConsultarVeterinario.Location = new System.Drawing.Point(12, 162);
             this.btConsultarVeterinario.Name = "btConsultarVeterinario";
@@ -92,19 +92,19 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Indigo;
             this.label1.Location = new System.Drawing.Point(-4, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(814, 35);
             this.label1.TabIndex = 32;
-            this.label1.Text = "GESTÃO DE VETERINÁRIOS";
+            this.label1.Text = "GESTÃO DE CLÍNICA VETERINÁRIA";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btDeletarVeterinario
             // 
             this.btDeletarVeterinario.BackColor = System.Drawing.Color.White;
-            this.btDeletarVeterinario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.btDeletarVeterinario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btDeletarVeterinario.ForeColor = System.Drawing.Color.Indigo;
             this.btDeletarVeterinario.Location = new System.Drawing.Point(14, 272);
             this.btDeletarVeterinario.Name = "btDeletarVeterinario";
