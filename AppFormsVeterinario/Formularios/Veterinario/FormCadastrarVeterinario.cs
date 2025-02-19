@@ -37,7 +37,8 @@ namespace AppFormsVeterinario.Formularios
 
         private void btCancelar_Click(object sender, EventArgs e)
         {
-            txtNome.Clear(); txtCpf.Clear(); txtEspecializacao.Clear(); txtCRMV.Clear();
+            txtNome.Clear(); txtCpf.Clear(); txtEspecializacao.Clear(); txtCRMV.Clear(); txtNome.Select();
         }
+
     }
 }

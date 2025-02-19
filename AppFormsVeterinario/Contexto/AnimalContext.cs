@@ -16,11 +16,11 @@ namespace AppFormsVeterinario.Contexto
 
         public AnimalContext()
         {
-            dados_conexao = "server=localhost;port=3306;database=aula_po2;user=root;password=34241610@Gi;Persist Security Info=false;Connect Timeout=300;";
+            dados_conexao = "server=localhost;port=3306;database=aula_po2;user=root;password=root;Persist Security Info=false;Connect Timeout=300;";
             conexao = new MySqlConnection(dados_conexao);
         }
 
-        public void InserAnimal(Animal animal)
+        public void InserirAnimal(Animal animal)
         {
                 string sql = "insert into animal values (default, @nome, @genero, @especie, @raca, @idTutorFk)";
             try
@@ -104,7 +104,7 @@ namespace AppFormsVeterinario.Contexto
                 conexao.Close();
             }
         }
-        public List<Animal> ListarAnimals()
+        public List<Animal> ListarAnimais()
         {
             var ListaAnimais = new List<Animal>();
 
