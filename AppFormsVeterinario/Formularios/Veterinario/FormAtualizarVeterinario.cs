@@ -52,7 +52,7 @@ namespace AppFormsVeterinario.Formularios
                 pessoaSelec.Nome = txtNome.Text;
                 pessoaSelec.Cpf = txtCpf.Text;
                 pessoaSelec.CRMV = txtCRMV.Text;
-                pessoaSelec.Especializacao = txtEspecializacao.Text;
+                pessoaSelec.Especializacao = txtEspecializacao.Text; /// ai caralho
 
                 VeterinarioContext context = new VeterinarioContext();
                 context.AtualizarVeterinario(pessoaSelec);
