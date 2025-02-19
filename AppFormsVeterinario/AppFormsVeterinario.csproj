@@ -109,6 +109,36 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\AnimalForm\FormAtualizarAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AnimalForm\FormAtualizarAnimal.Designer.cs">
+      <DependentUpon>FormAtualizarAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AnimalForm\FormCadastrarAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AnimalForm\FormCadastrarAnimal.Designer.cs">
+      <DependentUpon>FormCadastrarAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AnimalForm\FormConsultarAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AnimalForm\FormConsultarAnimal.Designer.cs">
+      <DependentUpon>FormConsultarAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AnimalForm\FormDeletarAnimalcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AnimalForm\FormDeletarAnimalcs.Designer.cs">
+      <DependentUpon>FormDeletarAnimalcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AnimalForm\FormListarAnimais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AnimalForm\FormListarAnimais.Designer.cs">
+      <DependentUpon>FormListarAnimais.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Veterinario\FormAtualizarVeterinario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +177,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AnimalForm\FormAtualizarAnimal.resx">
+      <DependentUpon>FormAtualizarAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AnimalForm\FormCadastrarAnimal.resx">
+      <DependentUpon>FormCadastrarAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AnimalForm\FormConsultarAnimal.resx">
+      <DependentUpon>FormConsultarAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AnimalForm\FormDeletarAnimalcs.resx">
+      <DependentUpon>FormDeletarAnimalcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AnimalForm\FormListarAnimais.resx">
+      <DependentUpon>FormListarAnimais.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Veterinario\FormAtualizarVeterinario.resx">
       <DependentUpon>FormAtualizarVeterinario.cs</DependentUpon>
@@ -190,9 +235,8 @@
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Formularios\Animal\" />
-    <Folder Include="Formularios\Consulta\" />
-    <Folder Include="Formularios\Tutor\" />
+    <Folder Include="Formularios\ConsultaForm\" />
+    <Folder Include="Formularios\TutorForm\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
