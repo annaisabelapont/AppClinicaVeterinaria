@@ -20,7 +20,7 @@ namespace AppFormsVeterinario.Contexto
             conexao = new MySqlConnection(dados_conexao);
         }
 
-        public void CadastrarAnimal(Animal animal)
+        public void InserAnimal(Animal animal)
         {
             try
             {
@@ -46,6 +46,104 @@ namespace AppFormsVeterinario.Contexto
             {
                 conexao.Close();
             }
+        }
+        public void AtualizarAnimal(Animal animal)
+        {
+            try
+            {
+                conexao.Open();
+
+                string sql = "update animal set nome = @nome, genero = @genero, especie = @especie, raca = @raca, idTutorFk = @idTutorFk where id = @id";
+
+                MySqlCommand comando = new MySqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@nome", animal.Nome);
+                comando.Parameters.AddWithValue("@genero", animal.Genero);
+                comando.Parameters.AddWithValue("@especie", animal.Especie);
+                comando.Parameters.AddWithValue("@raca", animal.Raca);
+                comando.Parameters.AddWithValue("@idTutorFk", animal.IdTutorFk);
+
+                int linhasAfetadas = comando.ExecuteNonQuery();
+
+                if (linhasAfetadas > 0)
+                    MessageBox.Show("Animal atualizado com sucesso!");
+                else
+                    MessageBox.Show("Nenhum registro foi atualizado. Verifique o ID informado.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+        public void DeletarAnimal(Animal animal)
+        {
+            try
+            {
+                conexao.Open();
+
+                string sql = "exclude from animal where id = @id";
+
+                MySqlCommand comando = new MySqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@id", animal.Id);
+
+                int linhasAfetadas = comando.ExecuteNonQuery();
+
+                if (linhasAfetadas > 0)
+                    MessageBox.Show("Animal deletado com sucesso!");
+                else
+                    MessageBox.Show("Nenhum registro foi deletado. Verifique o ID informado.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+        public List<Animal> ListarAnimals()
+        {
+            var ListaAnimais = new List<Animal>();
+
+            try
+            {
+                conexao.Open();
+
+                string sql = "select * from animal";
+
+                MySqlCommand comando = new MySqlCommand(sql, conexao);
+
+                MySqlDataReader dados = comando.ExecuteReader();
+
+                while (dados.Read())
+                {
+                    Animal animal = new Animal();
+                    animal.Id = Convert.ToInt32(dados["Id"]);
+                    animal.Nome = dados["Nome"].ToString();
+                    animal.Genero = dados["Genero"].ToString();
+                    animal.Especie = dados["Especie"].ToString();
+                    animal.Raca = dados["Raca"].ToString();
+                    animal.IdTutorFk = Convert.ToInt32(dados["IdTutorFk"]);
+
+                    ListaAnimais.Add(animal);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+
+            return ListaAnimais;
         }
     }
 }
