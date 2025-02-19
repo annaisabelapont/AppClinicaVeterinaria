@@ -22,11 +22,10 @@ namespace AppFormsVeterinario.Contexto
 
         public void InserAnimal(Animal animal)
         {
+                string sql = "insert into animal values (default, @nome, @genero, @especie, @raca, @idTutorFk)";
             try
             {
                 conexao.Open();
-
-                string sql = "insert into animal values (default, @nome, @genero, @especie, @raca, @idTutorFk)";
 
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
 
@@ -49,11 +48,10 @@ namespace AppFormsVeterinario.Contexto
         }
         public void AtualizarAnimal(Animal animal)
         {
+                string sql = "update animal set nome = @nome, genero = @genero, especie = @especie, raca = @raca, idTutorFk = @idTutorFk where id = @id";
             try
             {
                 conexao.Open();
-
-                string sql = "update animal set nome = @nome, genero = @genero, especie = @especie, raca = @raca, idTutorFk = @idTutorFk where id = @id";
 
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
 
@@ -81,11 +79,10 @@ namespace AppFormsVeterinario.Contexto
         }
         public void DeletarAnimal(Animal animal)
         {
+                string sql = "delete from animal where id = @id";
             try
             {
                 conexao.Open();
-
-                string sql = "exclude from animal where id = @id";
 
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
 
@@ -111,11 +108,10 @@ namespace AppFormsVeterinario.Contexto
         {
             var ListaAnimais = new List<Animal>();
 
+                string sql = "select * from animal";
             try
             {
                 conexao.Open();
-
-                string sql = "select * from animal";
 
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
 

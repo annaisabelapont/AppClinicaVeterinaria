@@ -19,11 +19,11 @@ namespace AppFormsVeterinario.Contexto
 
         public void InserirVeterinario(Veterinario veterinario)
         {
+
+            string sql = "INSERT INTO VETERINARIO (Nome, Cpf, CRMV, Especializacao) VALUES (@Nome, @Cpf, @CRMV, @Especializacao)";
             try
             {
                 conexao.Open();
-
-                string sql = "INSERT INTO VETERINARIO (Nome, Cpf, CRMV, Especializacao) VALUES (@Nome, @Cpf, @CRMV, @Especializacao)";
 
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
 
