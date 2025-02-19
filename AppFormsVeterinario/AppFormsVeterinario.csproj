@@ -99,7 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexto\AnimalContext.cs" />
-    <Compile Include="Contexto\ConsultaContext.cs" />
+    <Compile Include="Contexto\ConsultaVetContext.cs" />
     <Compile Include="Contexto\Context.cs" />
     <Compile Include="Contexto\TutorContext.cs" />
     <Compile Include="Contexto\VeterinarioContext.cs" />

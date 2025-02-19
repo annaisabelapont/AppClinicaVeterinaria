@@ -113,6 +113,7 @@
             this.btCancelar.TabIndex = 27;
             this.btCancelar.Text = "CANCELAR";
             this.btCancelar.UseVisualStyleBackColor = false;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // btSalvar
             // 
@@ -126,6 +127,7 @@
             this.btSalvar.TabIndex = 26;
             this.btSalvar.Text = "SALVAR REGISTRO";
             this.btSalvar.UseVisualStyleBackColor = false;
+            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
             // 
             // txtEspecializacao
             // 

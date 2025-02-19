@@ -80,7 +80,7 @@ namespace AppFormsVeterinario.Contexto
             {
                 conexao.Open();
 
-                string sql = "exclude from tutor where id = @id";
+                string sql = "delete from tutor where id = @id";
 
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
 

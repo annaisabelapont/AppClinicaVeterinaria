@@ -41,7 +41,7 @@
             this.btListarVeterinarios.BackColor = System.Drawing.Color.White;
             this.btListarVeterinarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btListarVeterinarios.ForeColor = System.Drawing.Color.Indigo;
-            this.btListarVeterinarios.Location = new System.Drawing.Point(12, 326);
+            this.btListarVeterinarios.Location = new System.Drawing.Point(12, 296);
             this.btListarVeterinarios.Name = "btListarVeterinarios";
             this.btListarVeterinarios.Size = new System.Drawing.Size(785, 44);
             this.btListarVeterinarios.TabIndex = 36;
@@ -54,7 +54,7 @@
             this.btAtualizarVeterinario.BackColor = System.Drawing.Color.White;
             this.btAtualizarVeterinario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btAtualizarVeterinario.ForeColor = System.Drawing.Color.Indigo;
-            this.btAtualizarVeterinario.Location = new System.Drawing.Point(12, 222);
+            this.btAtualizarVeterinario.Location = new System.Drawing.Point(12, 196);
             this.btAtualizarVeterinario.Name = "btAtualizarVeterinario";
             this.btAtualizarVeterinario.Size = new System.Drawing.Size(785, 44);
             this.btAtualizarVeterinario.TabIndex = 35;
@@ -80,7 +80,7 @@
             this.btConsultarVeterinario.BackColor = System.Drawing.Color.White;
             this.btConsultarVeterinario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btConsultarVeterinario.ForeColor = System.Drawing.Color.Indigo;
-            this.btConsultarVeterinario.Location = new System.Drawing.Point(12, 162);
+            this.btConsultarVeterinario.Location = new System.Drawing.Point(12, 146);
             this.btConsultarVeterinario.Name = "btConsultarVeterinario";
             this.btConsultarVeterinario.Size = new System.Drawing.Size(785, 44);
             this.btConsultarVeterinario.TabIndex = 33;
@@ -106,7 +106,7 @@
             this.btDeletarVeterinario.BackColor = System.Drawing.Color.White;
             this.btDeletarVeterinario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btDeletarVeterinario.ForeColor = System.Drawing.Color.Indigo;
-            this.btDeletarVeterinario.Location = new System.Drawing.Point(14, 272);
+            this.btDeletarVeterinario.Location = new System.Drawing.Point(14, 246);
             this.btDeletarVeterinario.Name = "btDeletarVeterinario";
             this.btDeletarVeterinario.Size = new System.Drawing.Size(785, 44);
             this.btDeletarVeterinario.TabIndex = 37;
