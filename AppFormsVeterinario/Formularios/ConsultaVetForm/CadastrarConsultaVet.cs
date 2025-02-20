@@ -2,12 +2,7 @@
 using AppFormsVeterinario.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppFormsVeterinario.Formularios.ConsultaVetForm
@@ -30,6 +25,7 @@ namespace AppFormsVeterinario.Formularios.ConsultaVetForm
             cbAnimal.DataSource = listaAnimais;
             cbAnimal.DisplayMember = "Nome";
             cbAnimal.ValueMember = "Id";
+            cbAnimal.SelectedIndex = -1;
 
             VeterinarioContext veterinarioContext = new VeterinarioContext();
             listaVeterinarios = veterinarioContext.ListarVeterinarios();
@@ -37,6 +33,7 @@ namespace AppFormsVeterinario.Formularios.ConsultaVetForm
             cbVeterinario.DataSource = listaVeterinarios;
             cbVeterinario.DisplayMember = "Nome";
             cbVeterinario.ValueMember = "Id";
+            cbVeterinario.SelectedIndex = -1;
         }
 
         private void btSalvar_Click(object sender, EventArgs e)
@@ -45,27 +42,31 @@ namespace AppFormsVeterinario.Formularios.ConsultaVetForm
 
             consulta.Tipo = txtTipo.Text;
             consulta.DataConsulta = Convert.ToDateTime(txtData.Text);
+            consulta.IdVeterinarioFk = idVeterinarioSelecionado;
+            consulta.IdAnimalFk = idAnimalSelecionado;
 
 
             ConsultaVetContext context = new ConsultaVetContext();
             context.InserirConsulta(consulta);
-            MessageBox.Show(" CONSULTA CADASTRADA COM SUCESSO!", "2ºA INF", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            txtCpf.Clear(); txtCRMV.Clear(); txtData.Clear(); txtTipo.Clear(); cbVeterinario.SelectedIndex = -1;
+            txtNomeTutor.Clear(); txtNomeAnimal.Clear(); txtEspecie.Clear(); txtNomeVet.Clear(); cbAnimal.SelectedIndex = -1;
         }
 
         private void btCancelar_Click(object sender, EventArgs e)
         {
-            txtCpf.Clear(); txtCRMV.Clear(); txtData.Clear(); txtTipo.Clear();
-            txtNomeTutor.Clear(); txtNomeAnimal.Clear(); txtEspecie.Clear();
+            txtCpf.Clear(); txtCRMV.Clear(); txtData.Clear(); txtTipo.Clear(); cbVeterinario.SelectedIndex = -1;
+            txtNomeTutor.Clear(); txtNomeAnimal.Clear(); txtEspecie.Clear(); txtNomeVet.Clear(); cbAnimal.SelectedIndex = -1;
         }
 
         private void cbVeterinario_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbVeterinario.SelectedIndex > -1)
             {
-                var veterinarioSelecionado = listaVeterinarios[cbVeterinario.SelectedIndex];
-                idVeterinarioSelecionado = veterinarioSelecionado.Id;
-                txtNomeVet.Text = veterinarioSelecionado.Nome;
-                txtCRMV.Text = veterinarioSelecionado.CRMV;
+                Veterinario veterinario = listaVeterinarios[cbVeterinario.SelectedIndex];
+                idVeterinarioSelecionado = veterinario.Id;
+                txtNomeVet.Text = veterinario.Nome;
+                txtCRMV.Text = veterinario.CRMV;
             }
         }
 
@@ -73,15 +74,15 @@ namespace AppFormsVeterinario.Formularios.ConsultaVetForm
         {
             if (cbAnimal.SelectedIndex > -1)
             {
-                var animalSelecionado = listaAnimais[cbAnimal.SelectedIndex];
-                idAnimalSelecionado = animalSelecionado.Id;
-                txtNomeAnimal.Text = animalSelecionado.Nome;
-                txtEspecie.Text = animalSelecionado.Especie;
+                var animal = listaAnimais[cbAnimal.SelectedIndex];
+                idAnimalSelecionado = animal.Id;
+                txtNomeAnimal.Text = animal.Nome;
+                txtEspecie.Text = animal.Especie;
 
                 TutorContext tutorContext = new TutorContext();
                 var tutor = tutorContext.
                     ListarTutores().
-                    FirstOrDefault(v => v.Id == animalSelecionado.IdTutorFk);
+                    FirstOrDefault(v => v.Id == animal.IdTutorFk);
                 if (tutor != null)
                 {
                     txtNomeTutor.Text = tutor.Nome;
