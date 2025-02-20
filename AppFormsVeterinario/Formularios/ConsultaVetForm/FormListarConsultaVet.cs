@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppFormsVeterinario.Contexto;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,9 @@ namespace AppFormsVeterinario.Formularios.ConsultaVetForm
         public FormListarConsultaVet()
         {
             InitializeComponent();
+
+            ConsultaVetContext consultaContext = new ConsultaVetContext();
+            dtTabela.DataSource = consultaContext.ListarConsultas().ToList();
         }
     }
 }
