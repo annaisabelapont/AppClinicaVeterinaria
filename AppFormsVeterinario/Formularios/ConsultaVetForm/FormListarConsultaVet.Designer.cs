@@ -1,6 +1,6 @@
-﻿namespace AppFormsVeterinario.Formularios.AnimalForm
+﻿namespace AppFormsVeterinario.Formularios.ConsultaVetForm
 {
-    partial class FormListarAnimais
+    partial class FormListarConsultaVet
     {
         /// <summary>
         /// Required designer variable.
@@ -36,35 +36,34 @@
             // dtTabela
             // 
             this.dtTabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtTabela.Location = new System.Drawing.Point(11, 65);
+            this.dtTabela.Location = new System.Drawing.Point(22, 65);
             this.dtTabela.Margin = new System.Windows.Forms.Padding(4);
             this.dtTabela.Name = "dtTabela";
             this.dtTabela.RowHeadersWidth = 62;
-            this.dtTabela.Size = new System.Drawing.Size(787, 388);
-            this.dtTabela.TabIndex = 29;
-
+            this.dtTabela.Size = new System.Drawing.Size(765, 388);
+            this.dtTabela.TabIndex = 31;
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Cooper Black", 18F);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.label5.ForeColor = System.Drawing.Color.Indigo;
-            this.label5.Location = new System.Drawing.Point(-8, 12);
+            this.label5.Location = new System.Drawing.Point(1, 9);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(812, 49);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "LISTA DE ANIMAIS";
+            this.label5.Size = new System.Drawing.Size(795, 49);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "LISTA DE CONSULTAS VETERINÁRIAS";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FormListarAnimais
+            // FormListarConsultaVet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 478);
+            this.ClientSize = new System.Drawing.Size(800, 474);
             this.Controls.Add(this.dtTabela);
             this.Controls.Add(this.label5);
-            this.Name = "FormListarAnimais";
-            this.Text = "FormListarAnimais";
+            this.Name = "FormListarConsultaVet";
+            this.Text = "FormListarConsultaVet";
             ((System.ComponentModel.ISupportInitialize)(this.dtTabela)).EndInit();
             this.ResumeLayout(false);
 

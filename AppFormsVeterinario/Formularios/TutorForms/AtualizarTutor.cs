@@ -1,35 +1,24 @@
-<<<<<<< HEAD
-﻿using System;
-=======
 ﻿using AppFormsVeterinario.Contexto;
 using AppFormsVeterinario.Models;
 using System;
->>>>>>> 2b5e118ac87d116ecf75590cfe7658a6f00bdb1f
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-<<<<<<< HEAD
-using AppFormsVeterinario.Contexto;
-using AppFormsVeterinario.Models;
-=======
->>>>>>> 2b5e118ac87d116ecf75590cfe7658a6f00bdb1f
 
-namespace AppFormsVeterinario.Formularios.TutorForm
+namespace AppFormsVeterinario.Formularios.TutorForms
 {
-    public partial class FormAtualizarTutor : Form
+    public partial class AtualizarTutor : Form
     {
         int contExc = 0;
         List<Tutor> ListaTutores = new List<Tutor>();
-<<<<<<< HEAD
-=======
 
->>>>>>> 2b5e118ac87d116ecf75590cfe7658a6f00bdb1f
-        public FormAtualizarTutor()
+        public AtualizarTutor()
         {
             InitializeComponent();
             TutorContext context = new TutorContext();
@@ -39,53 +28,21 @@ namespace AppFormsVeterinario.Formularios.TutorForm
             comboBox1.SelectedIndex = -1;
         }
 
-<<<<<<< HEAD
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var linhaSelec = comboBox1.SelectedIndex;
-            if (linhaSelec > -1 && contExc > 0)
-            {
-                var tutorSelec = ListaTutores[linhaSelec];
-                tutorSelec.Nome = txtNome.Text;
-                tutorSelec.Telefone = txtTelefone.Text;
-                tutorSelec.Cpf = txtCpf.Text;
-                tutorSelec.Cep = txtCep.Text;
-            }
-            contExc++;
-        }     
-        
-=======
->>>>>>> 2b5e118ac87d116ecf75590cfe7658a6f00bdb1f
         private void btAtualizar_Click(object sender, EventArgs e)
         {
             var linhaSelec = comboBox1.SelectedIndex;
             if (linhaSelec > -1 && contExc > 0)
             {
                 var tutorSelec = ListaTutores[linhaSelec];
-<<<<<<< HEAD
-                tutorSelec.Nome = txtNome.Text;
-                tutorSelec.Telefone = txtTelefone.Text;
-                tutorSelec.Cpf = txtCpf.Text;
-                tutorSelec.Cep = txtCep.Text;
-=======
                 txtNome.Text = tutorSelec.Nome;
                 txtCpf.Text = tutorSelec.Cpf;
                 txtTelefone.Text = tutorSelec.Telefone;
                 txtCEP.Text = tutorSelec.Cep;
->>>>>>> 2b5e118ac87d116ecf75590cfe7658a6f00bdb1f
 
                 TutorContext context = new TutorContext();
                 context.AtualizarTutor(tutorSelec);
                 MessageBox.Show($"ID:{(tutorSelec.Id).ToString()} " + "ATUALIZADO COM SUCESSO!", "2ºA INF", MessageBoxButtons.OK, MessageBoxIcon.Information);
-<<<<<<< HEAD
-                txtNome.Clear(); txtTelefone.Clear(); txtCpf.Clear(); txtCep.Clear(); txtNome.Select();
-
-            }
-        }
-
-
-=======
-                txtNome.Clear(); txtCpf.Clear(); txtTelefone.Clear(); txtCEP.Clear();
+                txtNome.Clear(); txtCpf.Clear(); txtCEP.Clear(); txtTelefone.Clear();
                 txtNome.Select();
             }
         }
@@ -103,6 +60,5 @@ namespace AppFormsVeterinario.Formularios.TutorForm
             }
             contExc++;
         }
->>>>>>> 2b5e118ac87d116ecf75590cfe7658a6f00bdb1f
     }
 }

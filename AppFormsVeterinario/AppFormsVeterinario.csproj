@@ -139,11 +139,43 @@
     <Compile Include="Formularios\AnimalForm\FormListarAnimais.Designer.cs">
       <DependentUpon>FormListarAnimais.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Formularios\ConsultaForm\FormCadastrarConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\ConsultaForm\FormCadastrarConsulta.Designer.cs">
       <DependentUpon>FormCadastrarConsulta.cs</DependentUpon>
+=======
+    <Compile Include="Formularios\ConsultaVetForm\CadastrarConsultaVet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ConsultaVetForm\CadastrarConsultaVet.Designer.cs">
+      <DependentUpon>CadastrarConsultaVet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ConsultaVetForm\FormAtualizarConsultaVet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ConsultaVetForm\FormAtualizarConsultaVet.Designer.cs">
+      <DependentUpon>FormAtualizarConsultaVet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ConsultaVetForm\FormConsultarConsultaVet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ConsultaVetForm\FormConsultarConsultaVet.Designer.cs">
+      <DependentUpon>FormConsultarConsultaVet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ConsultaVetForm\FormDeletarConsultaVet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ConsultaVetForm\FormDeletarConsultaVet.Designer.cs">
+      <DependentUpon>FormDeletarConsultaVet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ConsultaVetForm\FormListarConsultaVet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ConsultaVetForm\FormListarConsultaVet.Designer.cs">
+      <DependentUpon>FormListarConsultaVet.cs</DependentUpon>
+>>>>>>> 2b5e118ac87d116ecf75590cfe7658a6f00bdb1f
     </Compile>
     <Compile Include="Formularios\TutorForm\FormAtualizarTutor.cs">
       <SubType>Form</SubType>
@@ -157,12 +189,30 @@
     <Compile Include="Formularios\TutorForm\FormCadastrarTutor.Designer.cs">
       <DependentUpon>FormCadastrarTutor.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="Formularios\TutorForm\FormConsultarTutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TutorForm\FormConsultarTutor.Designer.cs">
+      <DependentUpon>FormConsultarTutor.cs</DependentUpon>
+    </Compile>
+>>>>>>> 2b5e118ac87d116ecf75590cfe7658a6f00bdb1f
     <Compile Include="Formularios\TutorForm\FormDeletarTutor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\TutorForm\FormDeletarTutor.Designer.cs">
       <DependentUpon>FormDeletarTutor.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="Formularios\TutorForm\FormListarTutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TutorForm\FormListarTutor.Designer.cs">
+      <DependentUpon>FormListarTutor.cs</DependentUpon>
+    </Compile>
+>>>>>>> 2b5e118ac87d116ecf75590cfe7658a6f00bdb1f
     <Compile Include="Formularios\Veterinario\FormAtualizarVeterinario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,8 +267,19 @@
     <EmbeddedResource Include="Formularios\AnimalForm\FormListarAnimais.resx">
       <DependentUpon>FormListarAnimais.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Formularios\ConsultaForm\FormCadastrarConsulta.resx">
       <DependentUpon>FormCadastrarConsulta.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Formularios\ConsultaVetForm\FormAtualizarConsultaVet.resx">
+      <DependentUpon>FormAtualizarConsultaVet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ConsultaVetForm\FormDeletarConsultaVet.resx">
+      <DependentUpon>FormDeletarConsultaVet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ConsultaVetForm\FormListarConsultaVet.resx">
+      <DependentUpon>FormListarConsultaVet.cs</DependentUpon>
+>>>>>>> 2b5e118ac87d116ecf75590cfe7658a6f00bdb1f
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TutorForm\FormAtualizarTutor.resx">
       <DependentUpon>FormAtualizarTutor.cs</DependentUpon>
@@ -226,9 +287,21 @@
     <EmbeddedResource Include="Formularios\TutorForm\FormCadastrarTutor.resx">
       <DependentUpon>FormCadastrarTutor.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Formularios\TutorForm\FormDeletarTutor.resx">
       <DependentUpon>FormDeletarTutor.cs</DependentUpon>
     </EmbeddedResource>
+=======
+    <EmbeddedResource Include="Formularios\TutorForm\FormConsultarTutor.resx">
+      <DependentUpon>FormConsultarTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TutorForm\FormDeletarTutor.resx">
+      <DependentUpon>FormDeletarTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TutorForm\FormListarTutor.resx">
+      <DependentUpon>FormListarTutor.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> 2b5e118ac87d116ecf75590cfe7658a6f00bdb1f
     <EmbeddedResource Include="Formularios\Veterinario\FormAtualizarVeterinario.resx">
       <DependentUpon>FormAtualizarVeterinario.cs</DependentUpon>
     </EmbeddedResource>

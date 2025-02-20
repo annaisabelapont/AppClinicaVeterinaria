@@ -14,6 +14,7 @@ namespace AppFormsVeterinario.Formularios.AnimalForm
 {
     public partial class FormCadastrarAnimal : Form
     {
+<<<<<<< HEAD
         int cont = 1;
         int idTutor;
 
@@ -37,9 +38,25 @@ namespace AppFormsVeterinario.Formularios.AnimalForm
                 idTutor = tutor.Id;//para ser usado como chave estrangeira
             }
             cont++;
-        }
-    private void btSalvar_Click(object sender, EventArgs e)
+=======
+        private int idTutorSelecionado;
+        public List<Tutor> listaTutores = new List<Tutor>();
+
+        public FormCadastrarAnimal()
         {
+            InitializeComponent();
+
+            TutorContext tutorContext = new TutorContext();
+            listaTutores = tutorContext.ListarTutores();
+
+            cbTutor.DataSource = listaTutores;
+            cbTutor.DisplayMember = "Nome";
+            cbTutor.ValueMember = "Id";
+>>>>>>> 2b5e118ac87d116ecf75590cfe7658a6f00bdb1f
+        }
+
+    private void btSalvar_Click(object sender, EventArgs e)
+        { 
             Animal animal = new Animal();
             animal.IdTutorFk = idTutor;
             animal.Nome = txtNome.Text;
@@ -59,6 +76,17 @@ namespace AppFormsVeterinario.Formularios.AnimalForm
             txtNome.Clear(); txtGenero.Clear(); txtRaca.Clear(); txtEspecie.Clear(); txtNome.Select();
         }
 
+<<<<<<< HEAD
 
+=======
+        private void cbTutor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbTutor.SelectedIndex > -1)
+            {
+                var tutorSelec = listaTutores[cbTutor.SelectedIndex];
+                idTutorSelecionado = tutorSelec.Id;
+            }
+        }
+>>>>>>> 2b5e118ac87d116ecf75590cfe7658a6f00bdb1f
     }
 }
