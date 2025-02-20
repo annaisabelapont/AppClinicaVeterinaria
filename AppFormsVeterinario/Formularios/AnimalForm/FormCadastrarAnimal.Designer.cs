@@ -39,13 +39,15 @@
             this.txtEspecie = new System.Windows.Forms.TextBox();
             this.txtGenero = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbTutor = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Cooper Black", 18F);
             this.label5.ForeColor = System.Drawing.Color.Indigo;
-            this.label5.Location = new System.Drawing.Point(22, 64);
+            this.label5.Location = new System.Drawing.Point(13, 35);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(757, 47);
@@ -58,7 +60,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F);
             this.label4.ForeColor = System.Drawing.Color.Indigo;
-            this.label4.Location = new System.Drawing.Point(74, 264);
+            this.label4.Location = new System.Drawing.Point(82, 340);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 21);
@@ -70,7 +72,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F);
             this.label3.ForeColor = System.Drawing.Color.Indigo;
-            this.label3.Location = new System.Drawing.Point(362, 189);
+            this.label3.Location = new System.Drawing.Point(370, 265);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 21);
@@ -82,7 +84,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F);
             this.label2.ForeColor = System.Drawing.Color.Indigo;
-            this.label2.Location = new System.Drawing.Point(74, 189);
+            this.label2.Location = new System.Drawing.Point(82, 265);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 21);
@@ -94,7 +96,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F);
             this.label1.ForeColor = System.Drawing.Color.Indigo;
-            this.label1.Location = new System.Drawing.Point(74, 122);
+            this.label1.Location = new System.Drawing.Point(82, 198);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 21);
@@ -106,7 +108,7 @@
             this.btCancelar.BackColor = System.Drawing.Color.MistyRose;
             this.btCancelar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F);
             this.btCancelar.ForeColor = System.Drawing.Color.Firebrick;
-            this.btCancelar.Location = new System.Drawing.Point(366, 340);
+            this.btCancelar.Location = new System.Drawing.Point(374, 416);
             this.btCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(257, 46);
@@ -120,7 +122,7 @@
             this.btSalvar.BackColor = System.Drawing.Color.Honeydew;
             this.btSalvar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F);
             this.btSalvar.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btSalvar.Location = new System.Drawing.Point(366, 273);
+            this.btSalvar.Location = new System.Drawing.Point(374, 349);
             this.btSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.btSalvar.Name = "btSalvar";
             this.btSalvar.Size = new System.Drawing.Size(257, 48);
@@ -132,7 +134,7 @@
             // txtRaca
             // 
             this.txtRaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRaca.Location = new System.Drawing.Point(78, 291);
+            this.txtRaca.Location = new System.Drawing.Point(86, 367);
             this.txtRaca.Margin = new System.Windows.Forms.Padding(4);
             this.txtRaca.Name = "txtRaca";
             this.txtRaca.Size = new System.Drawing.Size(248, 30);
@@ -141,7 +143,7 @@
             // txtEspecie
             // 
             this.txtEspecie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEspecie.Location = new System.Drawing.Point(366, 213);
+            this.txtEspecie.Location = new System.Drawing.Point(374, 289);
             this.txtEspecie.Margin = new System.Windows.Forms.Padding(4);
             this.txtEspecie.Name = "txtEspecie";
             this.txtEspecie.Size = new System.Drawing.Size(248, 30);
@@ -150,7 +152,7 @@
             // txtGenero
             // 
             this.txtGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGenero.Location = new System.Drawing.Point(78, 213);
+            this.txtGenero.Location = new System.Drawing.Point(86, 289);
             this.txtGenero.Margin = new System.Windows.Forms.Padding(4);
             this.txtGenero.Name = "txtGenero";
             this.txtGenero.Size = new System.Drawing.Size(248, 30);
@@ -159,17 +161,44 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(78, 146);
+            this.txtNome.Location = new System.Drawing.Point(86, 222);
             this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(632, 30);
             this.txtNome.TabIndex = 33;
             // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F);
+            this.label6.ForeColor = System.Drawing.Color.Indigo;
+            this.label6.Location = new System.Drawing.Point(129, 101);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(531, 37);
+            this.label6.TabIndex = 57;
+            this.label6.Text = "PESQUISAR TUTOR";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cbTutor
+            // 
+            this.cbTutor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbTutor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbTutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTutor.FormattingEnabled = true;
+            this.cbTutor.Location = new System.Drawing.Point(140, 142);
+            this.cbTutor.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTutor.Name = "cbTutor";
+            this.cbTutor.Size = new System.Drawing.Size(529, 33);
+            this.cbTutor.TabIndex = 56;
+            this.cbTutor.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // FormCadastrarAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 516);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cbTutor);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -201,5 +230,7 @@
         private System.Windows.Forms.TextBox txtEspecie;
         private System.Windows.Forms.TextBox txtGenero;
         private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbTutor;
     }
 }

@@ -16,18 +16,31 @@ namespace AppFormsVeterinario.Formularios.AnimalForm
     {
 
         List<Animal> ListaAnimais = new List<Animal>();
+        List<Tutor> ListaTutores = new List<Tutor>();
 
         public FormConsultarAnimal()
         {
             InitializeComponent();
-            AnimalContext context = new AnimalContext();//preparou a conexão
-            ListaAnimais = context.ListarAnimais(); //conectou e buscou no banco
+            AnimalContext contextA = new AnimalContext();//preparou a conexão
+            ListaAnimais = contextA.ListarAnimais(); //conectou e buscou no banco
+
+            TutorContext contextT = new TutorContext();//preparou a conexão
+            ListaTutores = contextT.ListarTutores(); //conectou e buscou no banco
         }
 
         private void btPesquisar_Click_1(object sender, EventArgs e)
         {
-            var selecao = ListaAnimais.Where(p => p.Nome.Contains(txtNome.Text)).ToList();
-            dtTabela.DataSource = selecao.ToList();
+
+            var animal = ListaAnimais.Where(p => p.Nome.Contains(txtNome.Text)).FirstOrDefault();
+
+            // realacionar o tutor ao animal consultado
+            var TutorVinculado = ListaTutores.Where(m => m.Id == animal.IdTutorFk).FirstOrDefault();
+            txtTutor.Text = TutorVinculado.Nome;
+
+            //dados do aninal
+            txtGenero.Text = animal.Genero;
+            txtEspecie.Text = animal.Especie;
+            txtRaca.Text = animal.Raca;
         }
     }
 }
