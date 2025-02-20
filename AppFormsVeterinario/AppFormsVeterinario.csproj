@@ -259,6 +259,9 @@
     <EmbeddedResource Include="Formularios\TutorForm\FormCadastrarTutor.resx">
       <DependentUpon>FormCadastrarTutor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TutorForm\FormConsultarTutor.resx">
+      <DependentUpon>FormConsultarTutor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TutorForm\FormDeletarTutor.resx">
       <DependentUpon>FormDeletarTutor.cs</DependentUpon>
     </EmbeddedResource>

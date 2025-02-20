@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppFormsVeterinario.Contexto;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,8 @@ namespace AppFormsVeterinario.Formularios.TutorForm
         public FormListarTutor()
         {
             InitializeComponent();
+            TutorContext context = new TutorContext();
+            dtTabela.DataSource = context.ListarTutores();
         }
     }
 }
