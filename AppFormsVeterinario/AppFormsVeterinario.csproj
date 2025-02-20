@@ -100,7 +100,6 @@
   <ItemGroup>
     <Compile Include="Contexto\AnimalContext.cs" />
     <Compile Include="Contexto\ConsultaVetContext.cs" />
-    <Compile Include="Contexto\Context.cs" />
     <Compile Include="Contexto\TutorContext.cs" />
     <Compile Include="Contexto\VeterinarioContext.cs" />
     <Compile Include="Form1.cs">
@@ -168,6 +167,30 @@
     </Compile>
     <Compile Include="Formularios\ConsultaVetForm\FormListarConsultaVet.Designer.cs">
       <DependentUpon>FormListarConsultaVet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\MenuAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\MenuAnimal.Designer.cs">
+      <DependentUpon>MenuAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\MenuConsultaVet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\MenuConsultaVet.Designer.cs">
+      <DependentUpon>MenuConsultaVet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\MenuTutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\MenuTutor.Designer.cs">
+      <DependentUpon>MenuTutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\MenuVeterinario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\MenuVeterinario.Designer.cs">
+      <DependentUpon>MenuVeterinario.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\TutorForm\FormAtualizarTutor.cs">
       <SubType>Form</SubType>
@@ -255,6 +278,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ConsultaVetForm\CadastrarConsultaVet.resx">
       <DependentUpon>CadastrarConsultaVet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ConsultaVetForm\FormAtualizarConsultaVet.resx">
+      <DependentUpon>FormAtualizarConsultaVet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ConsultaVetForm\FormConsultarConsultaVet.resx">
+      <DependentUpon>FormConsultarConsultaVet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ConsultaVetForm\FormDeletarConsultaVet.resx">
+      <DependentUpon>FormDeletarConsultaVet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ConsultaVetForm\FormListarConsultaVet.resx">
+      <DependentUpon>FormListarConsultaVet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\MenuAnimal.resx">
+      <DependentUpon>MenuAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\MenuConsultaVet.resx">
+      <DependentUpon>MenuConsultaVet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\MenuTutor.resx">
+      <DependentUpon>MenuTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\MenuVeterinario.resx">
+      <DependentUpon>MenuVeterinario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TutorForm\FormAtualizarTutor.resx">
       <DependentUpon>FormAtualizarTutor.cs</DependentUpon>

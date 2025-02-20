@@ -18,33 +18,27 @@ namespace AppFormsVeterinario
             InitializeComponent();
         }
 
-        private void btCadastrarVeterinario_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            FormCadastrarVeterinario form = new FormCadastrarVeterinario();
+            MenuVeterinario form = new MenuVeterinario();
             form.ShowDialog();
         }
 
-        private void btConsultarVeterinario_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            FormConsultarVeterinario form = new FormConsultarVeterinario();
+            MenuConsultaVet form = new MenuConsultaVet();
             form.ShowDialog();
         }
 
-        private void btAtualizarVeterinario_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            FormAtualizarVeterinario form = new FormAtualizarVeterinario();
+            MenuTutor form = new MenuTutor();
             form.ShowDialog();
         }
 
-        private void btListarVeterinarios_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            FormListarVeterinario form = new FormListarVeterinario();
-            form.ShowDialog();
-        }
-
-        private void btDeletarVeterinario_Click(object sender, EventArgs e)
-        {
-            FormDeletarVeterinario form = new FormDeletarVeterinario();
+            MenuAnimal form = new MenuAnimal();
             form.ShowDialog();
         }
     }
