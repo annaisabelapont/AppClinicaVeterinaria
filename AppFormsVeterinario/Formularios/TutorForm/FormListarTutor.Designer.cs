@@ -1,6 +1,6 @@
-﻿namespace AppFormsVeterinario.Formularios.AnimalForm
+﻿namespace AppFormsVeterinario.Formularios.TutorForm
 {
-    partial class FormListarAnimais
+    partial class FormListarTutor
     {
         /// <summary>
         /// Required designer variable.
@@ -42,29 +42,28 @@
             this.dtTabela.RowHeadersWidth = 62;
             this.dtTabela.Size = new System.Drawing.Size(787, 388);
             this.dtTabela.TabIndex = 29;
-
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Cooper Black", 18F);
             this.label5.ForeColor = System.Drawing.Color.Indigo;
-            this.label5.Location = new System.Drawing.Point(-8, 12);
+            this.label5.Location = new System.Drawing.Point(-10, 9);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(812, 49);
             this.label5.TabIndex = 28;
-            this.label5.Text = "LISTA DE ANIMAIS";
+            this.label5.Text = "LISTA DE TUTORES";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FormListarAnimais
+            // FormListarTutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 478);
+            this.ClientSize = new System.Drawing.Size(815, 465);
             this.Controls.Add(this.dtTabela);
             this.Controls.Add(this.label5);
-            this.Name = "FormListarAnimais";
-            this.Text = "FormListarAnimais";
+            this.Name = "FormListarTutor";
+            this.Text = "FormListarTutor";
             ((System.ComponentModel.ISupportInitialize)(this.dtTabela)).EndInit();
             this.ResumeLayout(false);
 

@@ -19,6 +19,5 @@ namespace AppFormsVeterinario.Formularios
             VeterinarioContext context = new VeterinarioContext();//prepara a conexão com o banco
             dtTabela.DataSource = context.ListarVeterinarios();//busca no banco e colocar os dados no grid
         }
-
     }
 }

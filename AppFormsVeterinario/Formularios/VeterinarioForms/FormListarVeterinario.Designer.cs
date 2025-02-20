@@ -1,6 +1,6 @@
-﻿namespace AppFormsVeterinario.Formularios.AnimalForm
+﻿namespace AppFormsVeterinario.Formularios
 {
-    partial class FormListarAnimais
+    partial class FormListarVeterinario
     {
         /// <summary>
         /// Required designer variable.
@@ -41,30 +41,29 @@
             this.dtTabela.Name = "dtTabela";
             this.dtTabela.RowHeadersWidth = 62;
             this.dtTabela.Size = new System.Drawing.Size(787, 388);
-            this.dtTabela.TabIndex = 29;
-
+            this.dtTabela.TabIndex = 27;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Cooper Black", 18F);
             this.label5.ForeColor = System.Drawing.Color.Indigo;
-            this.label5.Location = new System.Drawing.Point(-8, 12);
+            this.label5.Location = new System.Drawing.Point(-6, -3);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(812, 49);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "LISTA DE ANIMAIS";
+            this.label5.TabIndex = 26;
+            this.label5.Text = "LISTA DE VETERINÁRIOS";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FormListarAnimais
+            // FormListarVeterinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 478);
+            this.ClientSize = new System.Drawing.Size(814, 468);
             this.Controls.Add(this.dtTabela);
             this.Controls.Add(this.label5);
-            this.Name = "FormListarAnimais";
-            this.Text = "FormListarAnimais";
+            this.Name = "FormListarVeterinario";
+            this.Text = "FormListarVeterinario";
             ((System.ComponentModel.ISupportInitialize)(this.dtTabela)).EndInit();
             this.ResumeLayout(false);
 
