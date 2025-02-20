@@ -13,7 +13,7 @@ namespace AppFormsVeterinario.Contexto
 
         public TutorContext()
         {
-            dados_conexao = "server=localhost;port=3306;database=aula_po2;user=root;password=34241610@Gi;Persist Security Info=false;Connect Timeout=300;";
+            dados_conexao = "server=localhost;port=3306;database=clinica_veterinaria;user=root;password=root;Persist Security Info=false;Connect Timeout=300;";
             conexao = new MySqlConnection(dados_conexao);
         }
 
@@ -53,6 +53,7 @@ namespace AppFormsVeterinario.Contexto
 
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
 
+                comando.Parameters.AddWithValue("@id", tutor.Id);
                 comando.Parameters.AddWithValue("@nome", tutor.Nome);
                 comando.Parameters.AddWithValue("@telefone", tutor.Telefone);
                 comando.Parameters.AddWithValue("@cpf", tutor.Cpf);
