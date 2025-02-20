@@ -45,9 +45,9 @@
             // btAtualizar
             // 
             this.btAtualizar.BackColor = System.Drawing.Color.Honeydew;
-            this.btAtualizar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F);
+            this.btAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.btAtualizar.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btAtualizar.Location = new System.Drawing.Point(418, 345);
+            this.btAtualizar.Location = new System.Drawing.Point(419, 333);
             this.btAtualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btAtualizar.Name = "btAtualizar";
             this.btAtualizar.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -59,9 +59,9 @@
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.label6.ForeColor = System.Drawing.Color.Indigo;
-            this.label6.Location = new System.Drawing.Point(91, 101);
+            this.label6.Location = new System.Drawing.Point(91, 86);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(531, 37);
@@ -75,7 +75,7 @@
             this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(102, 142);
+            this.comboBox1.Location = new System.Drawing.Point(93, 127);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(529, 33);
@@ -84,12 +84,12 @@
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Cooper Black", 18F);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.label5.ForeColor = System.Drawing.Color.Indigo;
-            this.label5.Location = new System.Drawing.Point(13, 44);
+            this.label5.Location = new System.Drawing.Point(1, 29);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(703, 57);
+            this.label5.Size = new System.Drawing.Size(712, 57);
             this.label5.TabIndex = 25;
             this.label5.Text = "ATUALIZAR VETERINÁRIO";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -97,55 +97,55 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.label4.ForeColor = System.Drawing.Color.Indigo;
-            this.label4.Location = new System.Drawing.Point(39, 338);
+            this.label4.Location = new System.Drawing.Point(40, 326);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(178, 21);
+            this.label4.Size = new System.Drawing.Size(168, 22);
             this.label4.TabIndex = 24;
             this.label4.Text = "ESPECIALIZAÇÃO:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.label3.ForeColor = System.Drawing.Color.Indigo;
-            this.label3.Location = new System.Drawing.Point(414, 268);
+            this.label3.Location = new System.Drawing.Point(415, 256);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 21);
+            this.label3.Size = new System.Drawing.Size(67, 22);
             this.label3.TabIndex = 23;
             this.label3.Text = "CRMV:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.label2.ForeColor = System.Drawing.Color.Indigo;
-            this.label2.Location = new System.Drawing.Point(39, 268);
+            this.label2.Location = new System.Drawing.Point(40, 256);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 21);
+            this.label2.Size = new System.Drawing.Size(51, 22);
             this.label2.TabIndex = 22;
             this.label2.Text = "CPF:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.label1.ForeColor = System.Drawing.Color.Indigo;
-            this.label1.Location = new System.Drawing.Point(39, 202);
+            this.label1.Location = new System.Drawing.Point(40, 190);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 21);
+            this.label1.Size = new System.Drawing.Size(68, 22);
             this.label1.TabIndex = 21;
             this.label1.Text = "NOME:";
             // 
             // txtEspecializacao
             // 
             this.txtEspecializacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEspecializacao.Location = new System.Drawing.Point(43, 363);
+            this.txtEspecializacao.Location = new System.Drawing.Point(44, 351);
             this.txtEspecializacao.Margin = new System.Windows.Forms.Padding(4);
             this.txtEspecializacao.Name = "txtEspecializacao";
             this.txtEspecializacao.Size = new System.Drawing.Size(248, 30);
@@ -154,16 +154,16 @@
             // txtCRMV
             // 
             this.txtCRMV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCRMV.Location = new System.Drawing.Point(418, 293);
+            this.txtCRMV.Location = new System.Drawing.Point(419, 281);
             this.txtCRMV.Margin = new System.Windows.Forms.Padding(4);
             this.txtCRMV.Name = "txtCRMV";
-            this.txtCRMV.Size = new System.Drawing.Size(248, 30);
+            this.txtCRMV.Size = new System.Drawing.Size(257, 30);
             this.txtCRMV.TabIndex = 19;
             // 
             // txtCpf
             // 
             this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpf.Location = new System.Drawing.Point(43, 293);
+            this.txtCpf.Location = new System.Drawing.Point(44, 281);
             this.txtCpf.Margin = new System.Windows.Forms.Padding(4);
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(248, 30);
@@ -172,7 +172,7 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(43, 227);
+            this.txtNome.Location = new System.Drawing.Point(44, 215);
             this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(632, 30);

@@ -30,7 +30,6 @@ namespace AppFormsVeterinario.Formularios
 
             VeterinarioContext context = new VeterinarioContext();
             context.InserirVeterinario(veterinario);
-            MessageBox.Show(" VETERINÁRIO CADASTRADO COM SUCESSO!", "2ºA INF", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             txtNome.Clear(); txtCpf.Clear(); txtEspecializacao.Clear(); txtCRMV.Clear();
         }
