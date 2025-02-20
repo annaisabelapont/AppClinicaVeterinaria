@@ -17,6 +17,8 @@ namespace AppFormsVeterinario.Formularios.TutorForm
         int contExc = 0;
         List<Tutor> ListaTutores = new List<Tutor>();
 
+        Tutor tutorSelecionado = new Tutor();
+
         public FormAtualizarTutor()
         {
             InitializeComponent();
@@ -29,35 +31,31 @@ namespace AppFormsVeterinario.Formularios.TutorForm
 
         private void btAtualizar_Click(object sender, EventArgs e)
         {
-            var linhaSelec = comboBox1.SelectedIndex;
-            if (linhaSelec > -1 && contExc > 0)
-            {
-                var tutorSelec = ListaTutores[linhaSelec];
-                txtNome.Text = tutorSelec.Nome;
-                txtCpf.Text = tutorSelec.Cpf;
-                txtTelefone.Text = tutorSelec.Telefone;
-                txtCEP.Text = tutorSelec.Cep;
+            tutorSelecionado.Nome = txtNome.Text;
+            tutorSelecionado.Cpf = txtCpf.Text;
+            tutorSelecionado.Cep = txtCEP.Text;
+            tutorSelecionado.Telefone = txtTelefone.Text;
 
-                TutorContext context = new TutorContext();
-                context.AtualizarTutor(tutorSelec);
-                MessageBox.Show($"ID:{(tutorSelec.Id).ToString()} " + "ATUALIZADO COM SUCESSO!", "2ºA INF", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtNome.Clear(); txtCpf.Clear(); txtTelefone.Clear(); txtCEP.Clear();
-                txtNome.Select();
-            }
+            TutorContext context = new TutorContext();
+            context.AtualizarTutor(tutorSelecionado);
+
+            txtNome.Clear(); txtCpf.Clear(); txtTelefone.Clear(); txtCEP.Clear();
+            txtNome.Select(); 
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             var linhaSelec = comboBox1.SelectedIndex;
-            if (linhaSelec > -1 && contExc > 0)
+            if (linhaSelec > -1)
             {
                 var tutorSelec = ListaTutores[linhaSelec];
                 txtNome.Text = tutorSelec.Nome;
                 txtCpf.Text = tutorSelec.Cpf;
                 txtTelefone.Text = tutorSelec.Telefone;
                 txtCEP.Text = tutorSelec.Cep;
+
+                tutorSelecionado = tutorSelec;
             }
-            contExc++;
         }
     }
 }
