@@ -9,55 +9,95 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppFormsVeterinario.Contexto;
 using AppFormsVeterinario.Models;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AppFormsVeterinario.Formularios.AnimalForm
 {
     public partial class FormAtualizarAnimal : Form
     {    
-        int contExc = 0;
         List<Animal> ListaAnimais = new List<Animal>();
         public FormAtualizarAnimal()
         {
             InitializeComponent();
             AnimalContext context = new AnimalContext();
             ListaAnimais = context.ListarAnimais();
-            comboBox1.DataSource = ListaAnimais.ToList();
-            comboBox1.DisplayMember = "Nome";
-            comboBox1.SelectedIndex = -1;
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var linhaSelec = comboBox1.SelectedIndex;
-            if (linhaSelec > -1 && contExc > 0)
-            {
-                var pessoaSelec = ListaAnimais[linhaSelec];
-                txtNome.Text = pessoaSelec.Nome;
-                txtGenero.Text = pessoaSelec.Genero;
-                txtEspecie.Text = pessoaSelec.Especie;
-                txtRaca.Text = pessoaSelec.Raca;
-            }
-            contExc++;
+            cbTutor.DataSource = ListaAnimais.ToList();
+            cbTutor.DisplayMember = "Nome";
+            cbTutor.SelectedIndex = -1;
         }
 
         private void btAtualizar_Click(object sender, EventArgs e)
         {
-            var linhaSelec = comboBox1.SelectedIndex;
-            if (linhaSelec > -1 && contExc > 0)
+            if (cbTutor.SelectedIndex > -1)
             {
-                var animalSelec = ListaAnimais[linhaSelec];
-                animalSelec.Nome = txtNome.Text;
-                animalSelec.Genero = txtGenero.Text;
+                int idAnimalSelec = (int)cbTutor.SelectedValue;
+                var animalSelec = ListaAnimais.
+                    FirstOrDefault(m => m.Id == idAnimalSelec);
                 animalSelec.Especie = txtEspecie.Text;
+                animalSelec.Genero = txtGenero.Text;
+                animalSelec.Nome = txtNome.Text;
                 animalSelec.Raca = txtRaca.Text;
 
                 AnimalContext context = new AnimalContext();
                 context.AtualizarAnimal(animalSelec);
-                MessageBox.Show($"ID:{(animalSelec.Id).ToString()} " + "ATUALIZADO COM SUCESSO!", "2ºA INF", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtNome.Clear(); txtGenero.Clear(); txtRaca.Clear(); txtEspecie.Clear(); txtNome.Select();
+
+                MessageBox.Show($"ID:{animalSelec.Id} ATUALIZADO COM SUCESSO!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                cbTutor.SelectedIndex = -1;
+                txtEspecie.Clear();
+                txtGenero.Clear();
+                txtRaca.Clear();
+                txtNome.Clear();
+                txtCEP.Clear();
+                txtNomeTutor.Clear();
+                txtCPF.Clear();
+                txtTelefone.Clear();
             }
         }
 
-        
+
+        private void cbTutor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbTutor.SelectedIndex > -1)
+            {
+                var animalSelec = ListaAnimais[cbTutor.SelectedIndex];
+
+                txtEspecie.Text = animalSelec.Especie;
+                txtGenero.Text = animalSelec.Genero;
+                txtNome.Text = animalSelec.Nome;
+                txtRaca.Text = animalSelec.Raca;
+
+                TutorContext tutorContext = new TutorContext();
+                var tutor = tutorContext.
+                    ListarTutores().
+                    FirstOrDefault(v => v.Id == animalSelec.IdTutorFk);
+
+                if (tutor != null)
+                {
+                    txtCEP.Text = tutor.Cep;
+                    txtCPF.Text = tutor.Cpf;
+                    txtNomeTutor.Text = tutor.Nome;
+                    txtTelefone.Text = tutor.Telefone;
+                }
+                else
+                {
+                    txtCEP.Clear();
+                    txtNomeTutor.Clear();
+                    txtCPF.Clear();
+                    txtTelefone.Clear();
+                }
+            }
+            else
+            {
+                txtEspecie.Clear();
+                txtGenero.Clear();
+                txtRaca.Clear();
+                txtNome.Clear();
+                txtCEP.Clear();
+                txtNomeTutor.Clear();
+                txtCPF.Clear();
+                txtTelefone.Clear();
+            }
+        }
     }
 }
