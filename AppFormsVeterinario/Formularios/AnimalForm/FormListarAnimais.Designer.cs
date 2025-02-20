@@ -54,7 +54,6 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "LISTA DE VETERINÁRIOS";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
             // 
             // FormListarAnimais
             // 

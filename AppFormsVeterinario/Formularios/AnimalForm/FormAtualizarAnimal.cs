@@ -57,7 +57,5 @@ namespace AppFormsVeterinario.Formularios.AnimalForm
                 txtNome.Clear(); txtGenero.Clear(); txtRaca.Clear(); txtEspecie.Clear(); txtNome.Select();
             }
         }
-
-        
     }
 }

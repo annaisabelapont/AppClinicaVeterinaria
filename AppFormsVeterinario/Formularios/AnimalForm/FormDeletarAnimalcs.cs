@@ -7,19 +7,56 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppFormsVeterinario.Contexto;
+using AppFormsVeterinario.Models;
 
 namespace AppFormsVeterinario.Formularios.AnimalForm
 {
     public partial class FormDeletarAnimalcs : Form
     {
+        int contExc = 0;
+        List<Animal> ListaAnimais = new List<Animal>();
+
         public FormDeletarAnimalcs()
         {
             InitializeComponent();
+            AnimalContext context = new AnimalContext();
+            ListaAnimais = context.ListarAnimais();
+            comboBox1.DataSource = ListaAnimais.ToList();
+            comboBox1.DisplayMember = "Nome";
+            comboBox1.SelectedIndex = -1;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            var linhaSelec = comboBox1.SelectedIndex;
+            if (linhaSelec > -1 && contExc > 0)
+            {
+                var pessoaSelec = ListaAnimais[linhaSelec];
+                txtNome.Text = pessoaSelec.Nome;
+                txtGenero.Text = pessoaSelec.Genero;
+                txtEspecie.Text = pessoaSelec.Especie;
+                txtRaca.Text = pessoaSelec.Raca;
+            }
+            contExc++;
+        }
 
+        private void btExcluir_Click(object sender, EventArgs e)
+        {
+            var linhaSelec = comboBox1.SelectedIndex;
+            if (linhaSelec > -1 && contExc > 0)
+            {
+                var animalSelec = ListaAnimais[linhaSelec];
+                animalSelec.Nome = txtNome.Text;
+                animalSelec.Genero = txtGenero.Text;
+                animalSelec.Especie = txtEspecie.Text;
+                animalSelec.Raca = txtRaca.Text;
+
+                AnimalContext context = new AnimalContext();
+                context.DeletarAnimal(animalSelec);
+                MessageBox.Show($"ID:{(animalSelec.Id).ToString()} " + "ATUALIZADO COM SUCESSO!", "2ºA INF", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNome.Clear(); txtGenero.Clear(); txtRaca.Clear(); txtEspecie.Clear(); txtNome.Select();
+            }
         }
     }
 }
