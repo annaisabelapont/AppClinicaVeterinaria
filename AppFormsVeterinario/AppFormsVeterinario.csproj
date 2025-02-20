@@ -253,14 +253,8 @@
     <EmbeddedResource Include="Formularios\AnimalForm\FormListarAnimais.resx">
       <DependentUpon>FormListarAnimais.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\ConsultaVetForm\FormAtualizarConsultaVet.resx">
-      <DependentUpon>FormAtualizarConsultaVet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\ConsultaVetForm\FormDeletarConsultaVet.resx">
-      <DependentUpon>FormDeletarConsultaVet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\ConsultaVetForm\FormListarConsultaVet.resx">
-      <DependentUpon>FormListarConsultaVet.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\ConsultaVetForm\CadastrarConsultaVet.resx">
+      <DependentUpon>CadastrarConsultaVet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TutorForm\FormAtualizarTutor.resx">
       <DependentUpon>FormAtualizarTutor.cs</DependentUpon>
