@@ -16,7 +16,7 @@ namespace AppFormsVeterinario.Contexto
 
         public AnimalContext()
         {
-            dados_conexao = "server=localhost;port=3306;database=aula_po2;user=root;password=root;Persist Security Info=false;Connect Timeout=300;";
+            dados_conexao = "server=localhost;port=3306;database=aula_po2;user=root;password=34241610@Gi;Persist Security Info=false;Connect Timeout=300;";
             conexao = new MySqlConnection(dados_conexao);
         }
 

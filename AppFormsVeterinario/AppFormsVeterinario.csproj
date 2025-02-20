@@ -253,6 +253,9 @@
     <EmbeddedResource Include="Formularios\AnimalForm\FormListarAnimais.resx">
       <DependentUpon>FormListarAnimais.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ConsultaVetForm\CadastrarConsultaVet.resx">
+      <DependentUpon>CadastrarConsultaVet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TutorForm\FormAtualizarTutor.resx">
       <DependentUpon>FormAtualizarTutor.cs</DependentUpon>
     </EmbeddedResource>
