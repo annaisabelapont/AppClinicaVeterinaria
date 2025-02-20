@@ -63,7 +63,6 @@ namespace AppFormsVeterinario.Contexto
 
                 if (linhasAfetadas > 0)
                     MessageBox.Show("Consulta atualizada com sucesso!");
-
                 else
                     MessageBox.Show("Nenhum registro foi atualizado. Verifique o ID informado.");
             }

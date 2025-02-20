@@ -39,6 +39,11 @@ namespace AppFormsVeterinario.Formularios
                 txtCRMV.Text = veterinarioSelec.CRMV;
                 txtEspecializacao.Text = veterinarioSelec.Especializacao;
             }
+
+            else
+            {
+                txtCpf.Clear(); txtCRMV.Clear(); txtNome.Clear(); txtEspecializacao.Clear();
+            }
             contExc++;
         }
 
@@ -55,7 +60,7 @@ namespace AppFormsVeterinario.Formularios
 
                 VeterinarioContext context = new VeterinarioContext();
                 context.DeletarVeterinario(veterinarioSelec);
-                MessageBox.Show($"ID: {(veterinarioSelec.Id).ToString()} " + "DELETADO COM SUCESSO!", "2ºA INF", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 txtCpf.Clear(); txtCRMV.Clear(); txtNome.Clear(); txtEspecializacao.Clear();
             }
         }

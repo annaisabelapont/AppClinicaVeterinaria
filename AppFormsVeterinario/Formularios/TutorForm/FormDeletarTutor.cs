@@ -40,8 +40,8 @@ namespace AppFormsVeterinario.Formularios.TutorForm
 
                 TutorContext context = new TutorContext();
                 context.DeletarTutor(tutorSelec);
-                MessageBox.Show($"ID:{(tutorSelec.Id).ToString()} " + "ATUALIZADO COM SUCESSO!", "2ºA INF", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtNome.Clear(); txtCpf.Clear(); txtTelefone.Clear(); txtCEP.Clear();
+
+                txtNome.Clear(); txtCpf.Clear(); txtTelefone.Clear(); txtCEP.Clear(); comboBox1.SelectedIndex = -1;
                 txtNome.Select();
             }
         }
@@ -56,6 +56,11 @@ namespace AppFormsVeterinario.Formularios.TutorForm
                 txtCpf.Text = tutorSelec.Cpf;
                 txtTelefone.Text = tutorSelec.Telefone;
                 txtCEP.Text = tutorSelec.Cep;
+            }
+            else
+            {
+                txtNome.Clear(); txtCpf.Clear(); txtTelefone.Clear(); txtCEP.Clear();
+
             }
             contExc++;
         }

@@ -68,6 +68,10 @@ namespace AppFormsVeterinario.Formularios.ConsultaVetForm
                 txtNomeVet.Text = veterinario.Nome;
                 txtCRMV.Text = veterinario.CRMV;
             }
+            else
+            {
+                txtNomeVet.Clear(); txtCRMV.Clear();
+            }
         }
 
         private void cbAnimal_SelectedIndexChanged(object sender, EventArgs e)
@@ -88,6 +92,11 @@ namespace AppFormsVeterinario.Formularios.ConsultaVetForm
                     txtNomeTutor.Text = tutor.Nome;
                     txtCpf.Text = tutor.Cpf;
                 }
+            }
+            else
+            {
+                txtNomeAnimal.Clear(); txtEspecie.Clear();
+                txtNomeTutor.Clear(); txtCpf.Clear();
             }
         }
     }

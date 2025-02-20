@@ -39,7 +39,7 @@ namespace AppFormsVeterinario.Formularios.TutorForm
             TutorContext context = new TutorContext();
             context.AtualizarTutor(tutorSelecionado);
 
-            txtNome.Clear(); txtCpf.Clear(); txtTelefone.Clear(); txtCEP.Clear();
+            txtNome.Clear(); txtCpf.Clear(); txtTelefone.Clear(); txtCEP.Clear(); comboBox1.SelectedIndex = -1;
             txtNome.Select(); 
         }
 
@@ -55,6 +55,10 @@ namespace AppFormsVeterinario.Formularios.TutorForm
                 txtCEP.Text = tutorSelec.Cep;
 
                 tutorSelecionado = tutorSelec;
+            }
+            else
+            {
+                txtNome.Clear(); txtCpf.Clear(); txtTelefone.Clear(); txtCEP.Clear();
             }
         }
     }

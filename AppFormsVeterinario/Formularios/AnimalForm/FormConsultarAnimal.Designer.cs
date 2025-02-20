@@ -39,9 +39,9 @@
             // btPesquisar
             // 
             this.btPesquisar.BackColor = System.Drawing.Color.White;
-            this.btPesquisar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F);
+            this.btPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.btPesquisar.ForeColor = System.Drawing.Color.Indigo;
-            this.btPesquisar.Location = new System.Drawing.Point(374, 132);
+            this.btPesquisar.Location = new System.Drawing.Point(407, 132);
             this.btPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btPesquisar.Name = "btPesquisar";
             this.btPesquisar.Size = new System.Drawing.Size(137, 37);
@@ -53,19 +53,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.label1.ForeColor = System.Drawing.Color.Indigo;
-            this.label1.Location = new System.Drawing.Point(97, 69);
+            this.label1.Location = new System.Drawing.Point(146, 69);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 21);
+            this.label1.Size = new System.Drawing.Size(68, 22);
             this.label1.TabIndex = 35;
             this.label1.Text = "NOME:";
             // 
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(101, 94);
+            this.txtNome.Location = new System.Drawing.Point(150, 94);
             this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(605, 30);
@@ -83,7 +83,7 @@
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Cooper Black", 18F);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.label5.ForeColor = System.Drawing.Color.Indigo;
             this.label5.Location = new System.Drawing.Point(13, 14);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);

@@ -52,6 +52,10 @@ namespace AppFormsVeterinario.Formularios.AnimalForm
                 var tutorSelec = listaTutores[cbTutor.SelectedIndex];
                 idTutorSelecionado = tutorSelec.Id;
             }
+            else
+            {
+                txtNome.Clear(); txtGenero.Clear(); txtRaca.Clear(); txtEspecie.Clear(); txtNome.Select(); cbTutor.SelectedIndex = -1;
+            }
         }
     }
 }

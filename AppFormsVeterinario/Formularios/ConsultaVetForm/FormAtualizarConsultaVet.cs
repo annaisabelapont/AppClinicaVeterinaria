@@ -33,6 +33,10 @@ namespace AppFormsVeterinario.Formularios.ConsultaVetForm
 
                 consultaSelecionada = consulta;
             }
+            else
+            {
+                txtTipo.Clear(); txtData.Clear(); txtIdAnimal.Clear(); txtIdVeterinário.Clear();
+            }
         }
 
         private void btAtualizar_Click(object sender, EventArgs e)

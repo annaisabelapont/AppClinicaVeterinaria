@@ -36,11 +36,11 @@
             // dtTabela
             // 
             this.dtTabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtTabela.Location = new System.Drawing.Point(11, 65);
+            this.dtTabela.Location = new System.Drawing.Point(15, 65);
             this.dtTabela.Margin = new System.Windows.Forms.Padding(4);
             this.dtTabela.Name = "dtTabela";
             this.dtTabela.RowHeadersWidth = 62;
-            this.dtTabela.Size = new System.Drawing.Size(787, 388);
+            this.dtTabela.Size = new System.Drawing.Size(785, 388);
             this.dtTabela.TabIndex = 27;
             // 
             // label5

@@ -39,6 +39,11 @@ namespace AppFormsVeterinario.Formularios
                 txtCRMV.Text = pessoaSelec.CRMV;
                 txtEspecializacao.Text = pessoaSelec.Especializacao;
             }
+            else
+            {
+                txtNome.Clear(); txtCpf.Clear(); txtEspecializacao.Clear(); txtCRMV.Clear();
+                txtNome.Select();
+            }
         }
 
         private void btAtualizar_Click(object sender, EventArgs e)
@@ -55,7 +60,7 @@ namespace AppFormsVeterinario.Formularios
                 VeterinarioContext context = new VeterinarioContext();
                 context.AtualizarVeterinario(pessoaSelec);
 
-                txtNome.Clear(); txtCpf.Clear(); txtEspecializacao.Clear(); txtCRMV.Clear();
+                txtNome.Clear(); txtCpf.Clear(); txtEspecializacao.Clear(); txtCRMV.Clear(); comboBox1.SelectedIndex = -1;
                 txtNome.Select();
             }
         }

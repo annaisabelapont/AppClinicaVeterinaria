@@ -36,6 +36,8 @@ namespace AppFormsVeterinario.Contexto
                 comando.Parameters.AddWithValue("@idTutorFk", animal.IdTutorFk);
 
                 comando.ExecuteNonQuery();
+
+                MessageBox.Show("Animal cadastrado com sucesso!");
             }
             catch (Exception ex)
             {

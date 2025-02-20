@@ -4,9 +4,7 @@ use clinica_veterinaria;
 create table veterinario(
 	id int primary key auto_increment,
 	nome varchar(40),
-    telefone varchar(13),
     cpf varchar(11),
-    cep varchar(8),
     especializacao varchar(20),
     crmv varchar(13)
 );
@@ -22,7 +20,7 @@ create table tutor(
 create table animal(
 	id int primary key auto_increment,
     nome varchar(20),
-    genero varchar(9),
+    genero varchar(10),
     especie varchar(25),
     raca varchar(25),
     idTutorFk int,
@@ -33,7 +31,7 @@ create table animal(
 create table consulta(
 	id int primary key auto_increment,
     tipo varchar(20),
-    data_consulta date,
+    dataConsulta date,
     idVeterinarioFk int,
     idAnimalFk int,
     

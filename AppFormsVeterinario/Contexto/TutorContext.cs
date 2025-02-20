@@ -33,6 +33,8 @@ namespace AppFormsVeterinario.Contexto
                 comando.Parameters.AddWithValue("@cep", tutor.Cep);
 
                 comando.ExecuteNonQuery();
+
+                MessageBox.Show("Tutor cadastrado com sucesso!");
             }
             catch (Exception ex)
             {

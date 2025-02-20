@@ -62,6 +62,7 @@ namespace AppFormsVeterinario.Formularios.ConsultaVetForm
         private void btExcluir_Click(object sender, EventArgs e)
         {
             consultaContext.DeletarConsulta(consultaSelecionada);
+
             txtNomeVet.Clear(); txtCRMV.Clear(); txtNomeAnimal.Clear(); txtEspecie.Clear(); txtNomeTutor.Clear(); txtCpf.Clear(); txtTipo.Clear(); txtData.Clear(); cbConsulta.SelectedIndex = -1;
         }
     }

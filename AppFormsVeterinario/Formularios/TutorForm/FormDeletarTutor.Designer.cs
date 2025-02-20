@@ -51,7 +51,7 @@
             this.btExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btExcluir.Name = "btExcluir";
             this.btExcluir.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btExcluir.Size = new System.Drawing.Size(294, 48);
+            this.btExcluir.Size = new System.Drawing.Size(281, 48);
             this.btExcluir.TabIndex = 82;
             this.btExcluir.Text = "DELETAR TUTOR";
             this.btExcluir.UseVisualStyleBackColor = false;
@@ -86,10 +86,10 @@
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.label5.ForeColor = System.Drawing.Color.Indigo;
-            this.label5.Location = new System.Drawing.Point(18, 10);
+            this.label5.Location = new System.Drawing.Point(-1, 10);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(703, 57);
+            this.label5.Size = new System.Drawing.Size(722, 57);
             this.label5.TabIndex = 79;
             this.label5.Text = "DELETAR TUTOR";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -157,7 +157,7 @@
             this.txtTelefone.Location = new System.Drawing.Point(399, 259);
             this.txtTelefone.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(272, 30);
+            this.txtTelefone.Size = new System.Drawing.Size(281, 30);
             this.txtTelefone.TabIndex = 73;
             // 
             // txtCpf

@@ -33,6 +33,8 @@ namespace AppFormsVeterinario.Contexto
                 comando.Parameters.AddWithValue("@Especializacao", veterinario.Especializacao);
 
                 comando.ExecuteNonQuery();
+
+                MessageBox.Show("Veterinário cadastrado com sucesso!");
             }
 
             catch (Exception ex)
@@ -98,7 +100,7 @@ namespace AppFormsVeterinario.Contexto
                 int linhasAfetadas = comando.ExecuteNonQuery();
 
                 if (linhasAfetadas > 0)
-                    MessageBox.Show("Veterinário deletada com sucesso!");
+                    MessageBox.Show("Veterinário deletado com sucesso!");
                 else
                     MessageBox.Show("Nenhum registro foi deletado. Verifique o ID informado.");
                 
