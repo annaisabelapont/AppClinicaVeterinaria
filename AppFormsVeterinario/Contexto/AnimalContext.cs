@@ -48,18 +48,18 @@ namespace AppFormsVeterinario.Contexto
         }
         public void AtualizarAnimal(Animal animal)
         {
-                string sql = "update animal set nome = @nome, genero = @genero, especie = @especie, raca = @raca, idTutorFk = @idTutorFk where id = @id";
+                string sql = "update animal set nome = @nome, genero = @genero, especie = @especie, raca = @raca where id = @id";
             try
             {
                 conexao.Open();
 
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
 
+                comando.Parameters.AddWithValue("@id", animal.Id);
                 comando.Parameters.AddWithValue("@nome", animal.Nome);
                 comando.Parameters.AddWithValue("@genero", animal.Genero);
                 comando.Parameters.AddWithValue("@especie", animal.Especie);
                 comando.Parameters.AddWithValue("@raca", animal.Raca);
-                comando.Parameters.AddWithValue("@idTutorFk", animal.IdTutorFk);
 
                 int linhasAfetadas = comando.ExecuteNonQuery();
 

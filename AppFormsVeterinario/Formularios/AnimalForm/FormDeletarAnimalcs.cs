@@ -6,56 +6,41 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AppFormsVeterinario.Formularios.AnimalForm
 {
     public partial class FormDeletarAnimalcs : Form
     {
         List<Animal> ListaAnimais = new List<Animal>();
+        Animal animalSelecionado = new Animal();
         public FormDeletarAnimalcs()
         {
             InitializeComponent();
             AnimalContext context = new AnimalContext();
             ListaAnimais = context.ListarAnimais();
-            cbTutor.DataSource = ListaAnimais.ToList();
-            cbTutor.DisplayMember = "Nome";
-            cbTutor.SelectedIndex = -1;
+            cbAnimal.DataSource = ListaAnimais.ToList();
+            cbAnimal.DisplayMember = "Nome";
+            cbAnimal.SelectedIndex = -1;
         }
 
 
-        private void cbTutor_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbAnimal_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbTutor.SelectedIndex > -1)
+            if (cbAnimal.SelectedIndex > -1)
             {
-                var animalSelec = ListaAnimais[cbTutor.SelectedIndex];
+                var animalSelec = ListaAnimais[cbAnimal.SelectedIndex];
 
                 txtEspecie.Text = animalSelec.Especie;
                 txtGenero.Text = animalSelec.Genero;
                 txtNome.Text = animalSelec.Nome;
                 txtRaca.Text = animalSelec.Raca;
 
-                TutorContext tutorContext = new TutorContext();
-                var tutor = tutorContext.
-                    ListarTutores().
-                    FirstOrDefault(v => v.Id == animalSelec.IdTutorFk);
-
-                if (tutor != null)
-                {
-                    txtCEP.Text = tutor.Cep;
-                    txtCPF.Text = tutor.Cpf;
-                    txtNomeTutor.Text = tutor.Nome;
-                    txtTelefone.Text = tutor.Telefone;
-                }
-                else
-                {
-                    txtCEP.Clear();
-                    txtNomeTutor.Clear();
-                    txtCPF.Clear();
-                    txtTelefone.Clear();
-                }
+                animalSelecionado = animalSelec;
             }
             else
             {
@@ -63,40 +48,15 @@ namespace AppFormsVeterinario.Formularios.AnimalForm
                 txtGenero.Clear();
                 txtRaca.Clear();
                 txtNome.Clear();
-                txtCEP.Clear();
-                txtNomeTutor.Clear();
-                txtCPF.Clear();
-                txtTelefone.Clear();
             }
         }
 
         private void btDeletar_Click(object sender, EventArgs e)
         {
-            if (cbTutor.SelectedIndex > -1)
-            {
-                int idAnimalSelec = (int)cbTutor.SelectedValue;
-                var animalSelec = ListaAnimais.
-                    FirstOrDefault(m => m.Id == idAnimalSelec);
-                animalSelec.Especie = txtEspecie.Text;
-                animalSelec.Genero = txtGenero.Text;
-                animalSelec.Nome = txtNome.Text;
-                animalSelec.Raca = txtRaca.Text;
+            AnimalContext context = new AnimalContext();
+            context.DeletarAnimal(animalSelecionado);
 
-                AnimalContext context = new AnimalContext();
-                context.DeletarAnimal(animalSelec);
-
-                MessageBox.Show($"ID:{animalSelec.Id} ATUALIZADO COM SUCESSO!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                cbTutor.SelectedIndex = -1;
-                txtEspecie.Clear();
-                txtGenero.Clear();
-                txtRaca.Clear();
-                txtNome.Clear();
-                txtCEP.Clear();
-                txtNomeTutor.Clear();
-                txtCPF.Clear();
-                txtTelefone.Clear();
-            }
+            txtNome.Clear(); txtGenero.Clear(); txtRaca.Clear(); txtEspecie.Clear(); txtNome.Select(); cbAnimal.SelectedIndex = -1;
         }
     }
 }

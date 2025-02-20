@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppFormsVeterinario.Contexto;
+using AppFormsVeterinario.Formularios.TutorForm;
 using AppFormsVeterinario.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -16,11 +17,16 @@ namespace AppFormsVeterinario.Formularios.AnimalForm
     public partial class FormAtualizarAnimal : Form
     {    
         List<Animal> ListaAnimais = new List<Animal>();
+
+        Animal animalSelecionado = new Animal();
+
         public FormAtualizarAnimal()
         {
             InitializeComponent();
+            
             AnimalContext context = new AnimalContext();
             ListaAnimais = context.ListarAnimais();
+
             cbTutor.DataSource = ListaAnimais.ToList();
             cbTutor.DisplayMember = "Nome";
             cbTutor.SelectedIndex = -1;
@@ -28,33 +34,21 @@ namespace AppFormsVeterinario.Formularios.AnimalForm
 
         private void btAtualizar_Click(object sender, EventArgs e)
         {
-            if (cbTutor.SelectedIndex > -1)
-            {
-                int idAnimalSelec = (int)cbTutor.SelectedValue;
-                var animalSelec = ListaAnimais.
-                    FirstOrDefault(m => m.Id == idAnimalSelec);
-                animalSelec.Especie = txtEspecie.Text;
-                animalSelec.Genero = txtGenero.Text;
-                animalSelec.Nome = txtNome.Text;
-                animalSelec.Raca = txtRaca.Text;
+            animalSelecionado.Especie = txtEspecie.Text;
+            animalSelecionado.Genero = txtGenero.Text;
+            animalSelecionado.Nome = txtNome.Text;
+            animalSelecionado.Raca = txtRaca.Text;
 
-                AnimalContext context = new AnimalContext();
-                context.AtualizarAnimal(animalSelec);
+            AnimalContext context = new AnimalContext();
 
-                MessageBox.Show($"ID:{animalSelec.Id} ATUALIZADO COM SUCESSO!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            context.AtualizarAnimal(animalSelecionado);
 
-                cbTutor.SelectedIndex = -1;
-                txtEspecie.Clear();
-                txtGenero.Clear();
-                txtRaca.Clear();
-                txtNome.Clear();
-                txtCEP.Clear();
-                txtNomeTutor.Clear();
-                txtCPF.Clear();
-                txtTelefone.Clear();
-            }
+            cbTutor.SelectedIndex = -1;
+            txtEspecie.Clear();
+            txtGenero.Clear();
+            txtRaca.Clear();
+            txtNome.Clear();
         }
-
 
         private void cbTutor_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -67,25 +61,7 @@ namespace AppFormsVeterinario.Formularios.AnimalForm
                 txtNome.Text = animalSelec.Nome;
                 txtRaca.Text = animalSelec.Raca;
 
-                TutorContext tutorContext = new TutorContext();
-                var tutor = tutorContext.
-                    ListarTutores().
-                    FirstOrDefault(v => v.Id == animalSelec.IdTutorFk);
-
-                if (tutor != null)
-                {
-                    txtCEP.Text = tutor.Cep;
-                    txtCPF.Text = tutor.Cpf;
-                    txtNomeTutor.Text = tutor.Nome;
-                    txtTelefone.Text = tutor.Telefone;
-                }
-                else
-                {
-                    txtCEP.Clear();
-                    txtNomeTutor.Clear();
-                    txtCPF.Clear();
-                    txtTelefone.Clear();
-                }
+                animalSelecionado = animalSelec;
             }
             else
             {
@@ -93,10 +69,6 @@ namespace AppFormsVeterinario.Formularios.AnimalForm
                 txtGenero.Clear();
                 txtRaca.Clear();
                 txtNome.Clear();
-                txtCEP.Clear();
-                txtNomeTutor.Clear();
-                txtCPF.Clear();
-                txtTelefone.Clear();
             }
         }
     }

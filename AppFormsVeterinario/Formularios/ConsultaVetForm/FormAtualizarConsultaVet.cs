@@ -1,13 +1,7 @@
 ﻿using AppFormsVeterinario.Contexto;
 using AppFormsVeterinario.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppFormsVeterinario.Formularios.ConsultaVetForm
@@ -16,6 +10,7 @@ namespace AppFormsVeterinario.Formularios.ConsultaVetForm
     {
         ConsultaVetContext consultaContext = new ConsultaVetContext();
         Consulta consultaSelecionada = new Consulta();
+
         public FormAtualizarConsultaVet()
         {
             InitializeComponent();
@@ -30,16 +25,26 @@ namespace AppFormsVeterinario.Formularios.ConsultaVetForm
             if (indexSelec > -1)
             {
                 Consulta consulta = consultaContext.ListarConsultas()[indexSelec];
-                //preencher txts
+
+                txtTipo.Text = consulta.Tipo;
+                txtData.Text = consulta.DataConsulta.ToString();
+                txtIdAnimal.Text = consulta.IdAnimalFk.ToString();
+                txtIdVeterinário.Text = consulta.IdVeterinarioFk.ToString();
+
                 consultaSelecionada = consulta;
             }
         }
 
         private void btAtualizar_Click(object sender, EventArgs e)
         {
-            //atribuir valores dos txts a consultacontext
+            consultaSelecionada.Tipo = txtTipo.Text;
+            consultaSelecionada.DataConsulta = Convert.ToDateTime(txtData.Text);
+            consultaSelecionada.IdAnimalFk = Convert.ToInt32(txtIdAnimal.Text);
+            consultaSelecionada.IdVeterinarioFk = Convert.ToInt32(txtIdVeterinário.Text);
+
             consultaContext.AtualizarConsulta(consultaSelecionada);
-            //limpar txts e cb
+
+            txtTipo.Clear(); txtData.Clear(); txtIdAnimal.Clear(); txtIdVeterinário.Clear(); cbConsulta.SelectedIndex = -1;
         }
     }
 }

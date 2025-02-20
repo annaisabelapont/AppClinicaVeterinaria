@@ -36,21 +36,21 @@
             // dtTabela
             // 
             this.dtTabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtTabela.Location = new System.Drawing.Point(22, 65);
+            this.dtTabela.Location = new System.Drawing.Point(22, 72);
             this.dtTabela.Margin = new System.Windows.Forms.Padding(4);
             this.dtTabela.Name = "dtTabela";
             this.dtTabela.RowHeadersWidth = 62;
-            this.dtTabela.Size = new System.Drawing.Size(765, 388);
+            this.dtTabela.Size = new System.Drawing.Size(753, 381);
             this.dtTabela.TabIndex = 31;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.label5.ForeColor = System.Drawing.Color.Indigo;
-            this.label5.Location = new System.Drawing.Point(1, 9);
+            this.label5.Location = new System.Drawing.Point(1, 18);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(795, 49);
+            this.label5.Size = new System.Drawing.Size(795, 40);
             this.label5.TabIndex = 30;
             this.label5.Text = "LISTA DE CONSULTAS VETERINÁRIAS";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

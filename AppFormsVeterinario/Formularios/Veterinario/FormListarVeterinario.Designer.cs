@@ -45,9 +45,9 @@
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Cooper Black", 18F);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.label5.ForeColor = System.Drawing.Color.Indigo;
-            this.label5.Location = new System.Drawing.Point(-6, -3);
+            this.label5.Location = new System.Drawing.Point(5, 12);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(812, 49);

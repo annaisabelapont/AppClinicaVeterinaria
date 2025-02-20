@@ -30,7 +30,6 @@ namespace AppFormsVeterinario.Formularios.TutorForm
 
             TutorContext context = new TutorContext();
             context.InserirTutor(tutor);
-            MessageBox.Show(" TUTOR CADASTRADO COM SUCESSO!", "2ºA INF", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             txtNome.Clear(); txtCpf.Clear(); txtCEP.Clear(); txtTelefone.Clear();
         }

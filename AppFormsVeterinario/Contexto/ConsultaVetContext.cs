@@ -13,7 +13,7 @@ namespace AppFormsVeterinario.Contexto
 
         public ConsultaVetContext()
         {
-            dados_conexao = "server=localhost;port=3306;database=aula_po2;user=root;password=root;Persist Security Info=false;Connect Timeout=300;";
+            dados_conexao = "server=localhost;port=3306;database=clinica_veterinaria;user=root;password=root;Persist Security Info=false;Connect Timeout=300;";
             conexao = new MySqlConnection(dados_conexao);
         }
 
@@ -32,6 +32,8 @@ namespace AppFormsVeterinario.Contexto
                 comando.Parameters.AddWithValue("@idAnimalFk", consulta.IdAnimalFk);
 
                 comando.ExecuteNonQuery();
+
+                MessageBox.Show("Consulta cadastrada com sucesso!");
             }
             catch (Exception ex)
             {
@@ -51,6 +53,7 @@ namespace AppFormsVeterinario.Contexto
 
                 MySqlCommand comando = new MySqlCommand(sql, conexao);
 
+                comando.Parameters.AddWithValue("@id", consulta.Id);
                 comando.Parameters.AddWithValue("@tipo", consulta.Tipo);
                 comando.Parameters.AddWithValue("@dataConsulta", consulta.DataConsulta);
                 comando.Parameters.AddWithValue("@idVeterinarioFk", consulta.IdVeterinarioFk);
